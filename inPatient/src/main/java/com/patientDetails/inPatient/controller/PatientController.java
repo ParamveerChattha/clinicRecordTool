@@ -25,7 +25,6 @@ public class PatientController {
 	
 	@RequestMapping(value= "/patientDetails", method = RequestMethod.POST)
 		public ResponseEntity<String> addQuestion(@RequestBody InPatient inPatient){
-
 		inPatientService.addPatient(inPatient); 
 		return ResponseEntity.ok("Patient Details Saved");
 		}
@@ -36,9 +35,9 @@ public class PatientController {
 	
 	@RequestMapping(value = "/find/{name}/{dob}", method =  RequestMethod.GET)
 		public ResponseEntity<List<InPatient>> findPatient(@PathVariable String name,  @PathVariable String dob ) throws ParseException{
-		Date dobConverted = new SimpleDateFormat("YYYY-MM-DD").parse(dob);
+		//Date dobConverted = new SimpleDateFormat("YYYY-MM-DD").parse(dob);
 		//System.out.println(dobConverted.getClass().getName());
-		return ResponseEntity.ok(inPatientService.findPatient(name, dobConverted));
+		return ResponseEntity.ok(inPatientService.findPatient(name, dob));
 		}
 
 }

@@ -13,6 +13,6 @@ public interface InPatientService {
 	
 	public List<InPatient> findPatient(String name);
 	
-	public List<InPatient> findPatient(String name, Date dob);
+	public List<InPatient> findPatient(String name, String dob);
 	
 }

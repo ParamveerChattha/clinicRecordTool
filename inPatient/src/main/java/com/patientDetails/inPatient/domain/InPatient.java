@@ -12,7 +12,7 @@ public class InPatient {
 	private Date inDate = new Date();
 	private String name;
 	@JsonFormat(pattern = "DD-MM-YYYY")
-	private Date dob;
+	private String dob;
 	private String location;
 	private String email;
 	private String patientIllness;
@@ -24,10 +24,10 @@ public class InPatient {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public Date getDob() {
+	public String getDob() {
 		return dob;
 	}
-	public void setDob(Date dob) {
+	public void setDob(String dob) {
 		this.dob = dob;
 	}
 	public String getLocation() {
