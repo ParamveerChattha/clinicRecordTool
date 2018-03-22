@@ -6,8 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./bodyform.component.css']
 })
 export class BodyformComponent implements OnInit {
+  genderIsDisables = false;
+  location = true;
+  gender = "M or F";
 
   constructor() { }
+
 
   ngOnInit() {
   }
