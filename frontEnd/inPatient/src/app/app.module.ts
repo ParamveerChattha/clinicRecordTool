@@ -1,7 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {MainServiceService} from './main-service.service';
-import { NoopAnimationsModule } from '@angular/platform-browser/animations'
+import { MainServiceService } from './main-service.service';
 import { MatMenuModule } from '@angular/material/menu';
 
 import { AppComponent } from './app.component';
@@ -22,8 +21,6 @@ import { ButtonsComponent } from './buttons/buttons.component';
   imports: [
     BrowserModule,
     MatMenuModule,
-    
-
   ],
   providers: [MainServiceService],
   bootstrap: [AppComponent]
