@@ -1,3 +1,16 @@
 <p>
   footer component
 </p>
+<h4 [style.color]="highlightColor"> this is style binding </h4>
+<h4 [ngStyle]="textStyles"> ngstyle is done here </h4>
+<div *ngIf = "flag" >
+  <h4> this is my if true statement </h4>
+</div>
+
+<ul>
+<li *ngFor = "let X of arr; let i = index">
+
+    <h4><pre> {{X}}      {{i}}    </pre></h4>
+
+</li>
+</ul>

@@ -15,5 +15,7 @@ export class BodyformComponent implements OnInit {
 
   ngOnInit() {
   }
-
+  public ageValFunc(){
+    return "age";
+  }
 }

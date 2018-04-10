@@ -1,0 +1,13 @@
+
+.text-success{
+  color: green;
+}
+.text-pending{
+  color: yellow;
+}
+.text-fail{
+  color: red;
+}
+.text-special{
+  font-style: italic;
+}
