@@ -1,15 +1,19 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { MainServiceService } from './main-service.service';
+import {  FormGroup , ReactiveFormsModule, FormsModule } from '@angular/forms';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+
 import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
-import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatRadioModule} from '@angular/material/radio';
 
 import { AppComponent } from './app.component';
 import { AppBarComponent } from './app-bar/app-bar.component';
 import { FooterComponent } from './footer/footer.component';
 import { BodyformComponent } from './bodyform/bodyform.component';
-import { ButtonsComponent } from './buttons/buttons.component';
 
 
 @NgModule({
@@ -18,13 +22,18 @@ import { ButtonsComponent } from './buttons/buttons.component';
     AppBarComponent,
     FooterComponent,
     BodyformComponent,
-    ButtonsComponent,
   ],
   imports: [
     BrowserModule,
     MatMenuModule,
     MatIconModule,
     NoopAnimationsModule,
+    MatFormFieldModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatCheckboxModule,
+    MatRadioModule,
+
   ],
   providers: [MainServiceService],
   bootstrap: [AppComponent]

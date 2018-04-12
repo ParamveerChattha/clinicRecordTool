@@ -4,19 +4,31 @@
 <br>
 <br>
 <br>
-<p>
+
 Please enter the details below
 <br>
-<input type = "text" placeholder = "name" >
+<input type = "text" placeholder = "name" #name>
 <br>
-<input type = "text" placeholder = "{{ageValFunc()}}">
+<input type = "text" placeholder = "{{ageValFunc()}}"  #age>
 <br>
-<input bind-disabled = "genderIsDisables" type = "text" placeholder = "{{gender}}">
-<br>
-<input [disabled] = "location" type = "input" placeholder = "location" >
-<br>
-<input [disabled] = "location" type = "input" placeholder = "hoya ki aa " >
-<br>
-<button type="btn default">submit</button>
+<div class="example-container">
+    <form class="example-container"  [formGroup]="options">
+      <div>
+        <label> Gender </label>
+        <mat-radio-group formControlName="floatLabel" #gender>
+          <mat-radio-button value="female">Female</mat-radio-button>
+          <mat-radio-button value="male">Male</mat-radio-button>
 
-</p>
+        </mat-radio-group>
+      </div>
+    </form>
+</div>        
+<br>
+<input type = "text" placeholder = "location" #loc >
+<br>
+<input type = "text" placeholder = "hoya ki aa " #prob >
+<br>
+<button type="btn default"
+    (click)= 'onSubmit(name.value,age.value, gender.value, loc.value, prob.value )'>
+        submit
+</button>
