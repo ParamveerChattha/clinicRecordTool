@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-bodyform',
+  selector: 'bodyform',
   templateUrl: './bodyform.component.html',
   styleUrls: ['./bodyform.component.css']
 })

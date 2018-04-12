@@ -1,8 +1,28 @@
-<mat-menu #appMenu="matMenu">
-  <button mat-menu-item>Settings</button>
-  <button mat-menu-item>Help</button>
-</mat-menu>
+<nav class="navbar navbar-expand-lg navbar-light bg-primary">
+  <a class="navbar-brand" href="#" id = "logo"> Dr Param's Dental Clinic</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav" id = "menuItems">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Tip of The Day </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Know Your Teeth Better    </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Healthy Habits</a>
+      </li>     
+    </ul>
+    <ul class = "collapse navbar-collapse" id = "menuSearch">
+    <li class = "nav-item">
+      <a> <input type = "text" placeholder="search"></a>
+    </li>
+    <li class = "nav-item">
+      <button type="btn">search</button>
+    </li>
+  </ul>
 
-<button mat-icon-button [matMenuTriggerFor]="appMenu">
-  <mat-icon>more_vert</mat-icon>
-</button>
+  </div>
+</nav>

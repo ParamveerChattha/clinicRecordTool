@@ -11,3 +11,17 @@
 .text-special{
   font-style: italic;
 }
+
+#logo{
+  position: relative;
+  left: 5%;
+}
+#menuItems{
+  position: relative;
+  left: 20%;
+  right: 20%;
+}
+#menuSearch{
+  position: relative;
+  left: 35%;
+}
