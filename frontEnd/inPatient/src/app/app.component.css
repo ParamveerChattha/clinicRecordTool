@@ -1,0 +1,12 @@
+#body{
+    margin-top: 80px;
+}
+.dropdown-toggle{
+     cursor: pointer
+}
+.ngbDropdown{
+    cursor: pointer
+}
+.ngbDropdownToggle{
+    cursor: pointer
+}

@@ -4,8 +4,8 @@ import { MainServiceService } from './main-service.service';
 import {  FormGroup , ReactiveFormsModule, FormsModule } from '@angular/forms';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
-import { RouterModule } from '@angular/router';
-
+import { RouterModule, Routes } from '@angular/router';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
 import {MatCheckboxModule} from '@angular/material/checkbox';
@@ -31,7 +31,6 @@ import { LoginComponent } from './login/login.component';
     RegistrationComponent,
     DailyCareComponent,
     LoginComponent,
-    
   ],
   imports: [
     BrowserModule,
@@ -43,6 +42,7 @@ import { LoginComponent } from './login/login.component';
     ReactiveFormsModule,
     MatCheckboxModule,
     MatRadioModule,
+    NgbModule.forRoot(),
     RouterModule.forRoot([
       {path: '', component: AppComponent},
       {path: 'registration', component: RegistrationComponent},
@@ -50,8 +50,6 @@ import { LoginComponent } from './login/login.component';
       {path: 'admin', component: AdminComponent},
       {path: 'login', component: LoginComponent}
     ])
-
-
   ],
   providers: [MainServiceService],
   bootstrap: [AppComponent]

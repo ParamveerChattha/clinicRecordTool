@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+<nav id="navbar" class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
   <a class="navbar-brand" href="#">logo</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -7,17 +7,17 @@
   <div class="collapse navbar-collapse" id="navbarsExampleDefault">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" routerLink="/">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" routerLink="">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" routerLink="/registration">Registration</a>
+        <a class="nav-link" routerLink="registration">Registration</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" routerLink="/dailycare">Daily Care</a>
+        <a class="nav-link" routerLink="dailycare">Daily Care</a>
       </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Know the processes</a>
-        <div class="dropdown-menu" aria-labelledby="dropdown01">
+      <li ngbDropdown class="nav-item dropdown">
+        <a ngbDropdownToggle class="nav-link dropdown-toggle"  id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Know the processes</a>
+        <div ngbDropdownMenu class="dropdown-menu" aria-labelledby="dropdown01">
           <a class="dropdown-item" href="#">Tooth Extraction</a>
           <a class="dropdown-item" href="#">Scaling</a>
           <a class="dropdown-item" href="#">Root Canal</a>
@@ -29,7 +29,7 @@
     <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit" routerLink="/login">AdminLogin</button>
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit" routerLink="/login">Admin Login</button>
     </form>
   </div>
 </nav>
