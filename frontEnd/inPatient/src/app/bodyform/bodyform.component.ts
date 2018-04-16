@@ -9,7 +9,7 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 export class BodyformComponent implements OnInit {
   genderIsDisabled = false;
 
-  private name : String;
+   name : String;
   private age : number;
   private gender : String;
   private location : String;
@@ -22,12 +22,8 @@ export class BodyformComponent implements OnInit {
   public ageValFunc(){
     return "age";
   }
-  public onSubmit(inputName,inputAge,inputGender,inputLocation,inputProblem){
-    this.name = inputName;
-    this.age = inputAge;
-    this.gender = inputGender;
-    this.location = inputLocation;
-    this.problem = inputProblem;
+  public onSubmit(){
+
     console.log(this.name + "  " + this.age);
   }
 }

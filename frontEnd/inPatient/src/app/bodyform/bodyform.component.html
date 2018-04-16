@@ -7,28 +7,32 @@
 
 Please enter the details below
 <br>
-<input type = "text" placeholder = "name" #name>
-<br>
-<input type = "text" placeholder = "{{ageValFunc()}}"  #age>
-<br>
-<div class="example-container">
-    <form class="example-container"  [formGroup]="options">
-      <div>
-        <label> Gender </label>
-        <mat-radio-group formControlName="floatLabel" #gender>
-          <mat-radio-button value="female">Female</mat-radio-button>
-          <mat-radio-button value="male">Male</mat-radio-button>
+<form>
+  <div class="form-group">
+  <input class="form-control"  ngModel name="name" type = "text" placeholder = "your name" id="name">
+  <br>
+  <input type = "text" placeholder = "{{ageValFunc()}}"  #age>
+  <br>
+  <div class="example-container">
+      <form class="example-container"  [formGroup]="options">
+        <div>
+          <label> Gender </label>
+          <mat-radio-group formControlName="floatLabel" #gender>
+            <mat-radio-button value="female">Female</mat-radio-button>
+            <mat-radio-button value="male">Male</mat-radio-button>
 
-        </mat-radio-group>
-      </div>
-    </form>
-</div>        
-<br>
-<input type = "text" placeholder = "location" #loc >
-<br>
-<input type = "text" placeholder = "hoya ki aa " #prob >
-<br>
-<button type="btn default"
-    (click)= 'onSubmit(name.value,age.value, gender.value, loc.value, prob.value )'>
-        submit
-</button>
+          </mat-radio-group>
+        </div>
+      </form>
+  </div>        
+  <br>
+  <input type = "text" placeholder = "location" #loc >
+  <br>
+  <input type = "text" placeholder = "hoya ki aa " #prob >
+  <br>
+  <button type="btn default"
+      (click)= 'onSubmit()'>
+          submit
+  </button>
+  </div>
+</form>
