@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-registration',
@@ -8,7 +8,19 @@ import { Component, OnInit } from '@angular/core';
 export class RegistrationComponent implements OnInit {
 
   constructor() { }
+  inpatient: any;
+  @ViewChild('f')
+    inPatientDetails : any;
 
+  save(inPatientdata){
+    console.log(inPatientdata);
+ 
+  }
+
+  clearForm(myForm){
+ 
+    myForm.reset();
+  }
   ngOnInit() {
   }
 

@@ -14,7 +14,6 @@ import {MatRadioModule} from '@angular/material/radio';
 import { AppComponent } from './app.component';
 import { AppBarComponent } from './app-bar/app-bar.component';
 import { FooterComponent } from './footer/footer.component';
-import { BodyformComponent } from './bodyform/bodyform.component';
 import { AdminComponent } from './admin/admin.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { DailyCareComponent } from './daily-care/daily-care.component';
@@ -26,7 +25,6 @@ import { LoginComponent } from './login/login.component';
     AppComponent,
     AppBarComponent,
     FooterComponent,
-    BodyformComponent,
     AdminComponent,
     RegistrationComponent,
     DailyCareComponent,
