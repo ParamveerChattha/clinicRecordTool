@@ -19,8 +19,8 @@ import { AdminComponent } from './admin/admin.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { DailyCareComponent } from './daily-care/daily-care.component';
 import { LoginComponent } from './login/login.component';
-import { PostsComponent } from './posts/posts.component';
 import { InPatientServiceService } from './service/in-patient-service.service';
+import { InPatientPostServiceService } from './service/in-patient-post-service.service';
 
 
 @NgModule({
@@ -32,7 +32,6 @@ import { InPatientServiceService } from './service/in-patient-service.service';
     RegistrationComponent,
     DailyCareComponent,
     LoginComponent,
-    PostsComponent,
   ],
   imports: [
     BrowserModule,
@@ -55,7 +54,8 @@ import { InPatientServiceService } from './service/in-patient-service.service';
     ])
   ],
   providers: [MainServiceService,
-            InPatientServiceService],
+            InPatientServiceService,
+          InPatientPostServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

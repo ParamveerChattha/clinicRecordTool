@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
+import { InPatientServiceService } from '../service/in-patient-service.service';
 
 @Component({
   selector: 'app-registration',
@@ -7,13 +8,16 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 })
 export class RegistrationComponent implements OnInit {
 
-  constructor() { }
+  constructor(private myService: InPatientServiceService) {
+  }
   inpatient: any;
-  @ViewChild('f')
+// used it to clear the data of the form, but did it without using it.  
+/*  @ViewChild('f')
     inPatientDetails : any;
-
+*/
   save(inPatientdata){
-    console.log(inPatientdata);
+  //  console.log(inPatientdata);
+    this.myService.getData(inPatientdata);
  
   }
 

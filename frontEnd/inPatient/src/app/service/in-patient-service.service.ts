@@ -1,19 +1,16 @@
 import { Injectable } from '@angular/core';
+import { InPatientPostServiceService } from './in-patient-post-service.service';
 
 @Injectable()
 export class InPatientServiceService {
 
-  constructor() { 
+  constructor(private postservice: InPatientPostServiceService) { 
  }
- private http: Http;
- url: string = "localhost:0945";
- getDetails(fname,lname,phone,email, address1,address2,state,city){
 
-    let rPost = {fName: input}
-    this.http.post(this.url, JSON.stringify(rPost))
-      .subscribe(response =>{
-        console.log(response.json());
-        })
-}
-
+ getData(inPatientDetails)
+ {
+  // console.log("this is service");
+ //  console.log(inPatientDetails);
+   this.postservice.createPost(inPatientDetails);
+ }
 }
