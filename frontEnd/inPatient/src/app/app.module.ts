@@ -11,6 +11,7 @@ import { MatIconModule } from '@angular/material/icon';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatRadioModule} from '@angular/material/radio';
 import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { AppBarComponent } from './app-bar/app-bar.component';
@@ -35,6 +36,7 @@ import { InPatientPostServiceService } from './service/in-patient-post-service.s
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     MatMenuModule,
     MatIconModule,
     NoopAnimationsModule,

@@ -15,4 +15,6 @@ public interface InPatientService {
 	
 	public List<InPatient> findPatient(String name, String dob);
 	
+	public String deleteRecord(InPatient inpatient);
+	
 }

@@ -45,21 +45,25 @@ public class InPatientServiceImpl implements InPatientService {
 	}
 	public List<InPatient> findPatient(String name, String dob)
 	{
-		//System.out.println(dob.getClass().getName());
-		//DateFormat dateFormatter =  new SimpleDateFormat("YYYY-MM-DD");
-		
-	//	dob=dateFormatter.format(dob);
-	//	System.out.println(dob.getClass().getName());
-		System.out.println("date is " + dob);
+
 		Query query = new Query();
 			query.addCriteria(Criteria.where("name").is(name)
 					.andOperator(Criteria.where("dob").is(dob)));
-		//System.out.println(query + " " + dob + " " + name);
-		System.out.println("this is " + dob);
-		System.out.println(dob.getClass().getName());
+
 		List<InPatient> patients = mongoTemplate.find(query, InPatient.class);
 		return patients;
 	}
+
+	@Override
+	public String deleteRecord(InPatient inpatient) {
+		 repository.delete(inpatient);
+		 System.out.println(inpatient + "deleted");
+		 return "record deleted";
+	}
+
+
+
+	
 	
 	
 }

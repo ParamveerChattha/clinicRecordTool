@@ -1,8 +1,6 @@
 package com.patientDetails.inPatient.controller;
 
 import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,7 +21,7 @@ public class PatientController {
 	@Autowired
 		InPatient inPatient;
 	
-	@RequestMapping(value= "/patientDetails", method = RequestMethod.POST)
+	@RequestMapping(value= "/inPatient", method = RequestMethod.POST)
 		public ResponseEntity<String> addQuestion(@RequestBody InPatient inPatient){
 		inPatientService.addPatient(inPatient); 
 		return ResponseEntity.ok("Patient Details Saved");
@@ -32,7 +30,6 @@ public class PatientController {
 		public ResponseEntity<List<InPatient>> findPatient(@PathVariable String name){
 		return ResponseEntity.ok(inPatientService.findPatient(name));
 	}
-	
 	@RequestMapping(value = "/find/{name}/{dob}", method =  RequestMethod.GET)
 		public ResponseEntity<List<InPatient>> findPatient(@PathVariable String name,  @PathVariable String dob ) throws ParseException{
 		//Date dobConverted = new SimpleDateFormat("YYYY-MM-DD").parse(dob);
