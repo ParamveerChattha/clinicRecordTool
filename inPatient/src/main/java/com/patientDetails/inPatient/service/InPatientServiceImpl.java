@@ -34,6 +34,8 @@ public class InPatientServiceImpl implements InPatientService {
 		return repository.save(inPatient);
 	}
 	
+
+	
 	public List<InPatient> findPatient(String name)
 	{
 		Query query = new Query();
