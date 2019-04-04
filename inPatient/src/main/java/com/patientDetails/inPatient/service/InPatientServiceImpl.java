@@ -29,17 +29,16 @@ public class InPatientServiceImpl implements InPatientService {
 
 
 	public InPatient addPatient(InPatient inPatient) {
-			System.out.println("dob is " + inPatient.getDob());
+//			System.out.println("dob is " + inPatient.getDob());
 			
 		return repository.save(inPatient);
 	}
 	
-
 	
 	public List<InPatient> findPatient(String name)
 	{
 		Query query = new Query();
-			query.addCriteria(Criteria.where("name").is(name));
+			query.addCriteria(Criteria.where("firstName").is(name));
 	//		System.out.println(query);
 		List<InPatient> patients = mongoTemplate.find(query, InPatient.class);
 	//	System.out.println(patients);
@@ -49,7 +48,7 @@ public class InPatientServiceImpl implements InPatientService {
 	{
 
 		Query query = new Query();
-			query.addCriteria(Criteria.where("name").is(name)
+			query.addCriteria(Criteria.where("firstName").is(name)
 					.andOperator(Criteria.where("dob").is(dob)));
 
 		List<InPatient> patients = mongoTemplate.find(query, InPatient.class);
@@ -63,9 +62,5 @@ public class InPatientServiceImpl implements InPatientService {
 		 return "record deleted";
 	}
 
-
-
-	
-	
 	
 }
