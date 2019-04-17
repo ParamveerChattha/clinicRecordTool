@@ -18,9 +18,7 @@ import com.patientDetails.inPatient.repository.ApplicationUserRepository;
 @RequestMapping("/users")
 public class CredentialController {
 	
-@Autowired
 	private LoginCheck loginCheck;
-
 	private ApplicationUserRepository applicationUserRepository;
 	private BCryptPasswordEncoder bCryptPasswordEncoder;
 	public void UserController(ApplicationUserRepository applicationUserRepository,BCryptPasswordEncoder bCryptPasswordEncoder) {

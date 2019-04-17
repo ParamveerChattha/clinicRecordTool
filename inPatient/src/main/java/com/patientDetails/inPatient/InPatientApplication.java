@@ -11,7 +11,7 @@ public class InPatientApplication {
 	
 	@Bean
 		public BCryptPasswordEncoder bCryptPasswordEncoder() {
-		return bCryptPasswordEncoder();
+		return new BCryptPasswordEncoder();
 	}
 	
 	public static void main(String[] args) {

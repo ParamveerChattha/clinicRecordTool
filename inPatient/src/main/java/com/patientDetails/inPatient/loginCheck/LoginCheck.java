@@ -5,12 +5,16 @@ import java.util.HashMap;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+import org.springframework.data.annotation.Id;
 
 import com.patientDetails.inPatient.domain.LoginDetails;
 
+@EntityScan
 public class LoginCheck {
-	@Autowired
-		LoginDetails loginDetails;
+	@Id
+	
+	private LoginDetails loginDetails;
 	public Map<String,String> credentials  = new HashMap<>();
 	
 	public void signupCredentials(String uid,Number mobile, String password) {

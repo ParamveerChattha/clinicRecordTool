@@ -15,6 +15,7 @@ import com.patientDetails.inPatient.domain.InPatient;
 import com.patientDetails.inPatient.service.InPatientService;
 
 @RestController
+
 public class PatientController {
 	@Autowired
 		private InPatientService inPatientService;
@@ -22,7 +23,7 @@ public class PatientController {
 		InPatient inPatient;
 	
 	@RequestMapping(value= "/inPatient", method = RequestMethod.POST)
-		public ResponseEntity<String> addQuestion(@RequestBody InPatient inPatient){
+		public ResponseEntity<String> addPatient(@RequestBody InPatient inPatient){
 		inPatientService.addPatient(inPatient); 
 		return ResponseEntity.ok("Patient Details Saved");
 		}

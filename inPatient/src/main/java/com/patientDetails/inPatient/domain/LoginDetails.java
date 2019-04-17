@@ -2,8 +2,12 @@ package com.patientDetails.inPatient.domain;
 
 import java.util.Date;
 
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+import org.springframework.data.annotation.Id;
+
+@EntityScan
 public class LoginDetails {
-	
+	@Id
 	private String uid;
 	private String password;
 	private Number mobNum;
