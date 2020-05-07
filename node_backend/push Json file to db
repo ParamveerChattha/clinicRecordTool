@@ -1,0 +1,5 @@
+mongoimport --db clinic-appointments --collection patientdetails --drop --file patients.json --jsonArray
+mongoimport --db clinic-appointments --collection appointmentdetails --drop --file appointments.json --jsonArray
+
+
+mongod --dbpath ~/data/db

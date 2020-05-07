@@ -1,0 +1,24 @@
+{
+  "name": "node_backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./clinic/index.js",
+    "dev": "nodemon ./index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "http": "0.0.1-security",
+    "mongod": "^2.0.0",
+    "mongodb": "^3.5.7",
+    "mongoose": "^5.9.10",
+    "nodemon": "^2.0.2",
+    "validator": "^13.0.0"
+  },
+  "devDependencies": {},
+  "description": ""
+}

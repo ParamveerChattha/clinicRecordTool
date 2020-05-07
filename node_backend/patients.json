@@ -1,0 +1,54 @@
+[
+    {
+        "_id": "param532100",
+        "name": "Paramveer Singh",
+        "age": "27",
+        "dob": "08-July-1992",
+        "gender": "male",
+        "state": "punjab",
+        "city": "mohali",
+        "address": "945 sector 70",
+        "phoneNumber": "9781532100",
+        "recentDiagnosis": "dand ch keede",
+        "patientStatus": "active"
+    },
+    {
+        "_id": "param12345",
+        "name": "Paramjeet kaur",
+        "age": "31",
+        "dob": "08-July-1992",
+        "gender": "female",
+        "state": "punjab",
+        "city": "mohali",
+        "address": "945 sector 70",
+        "phoneNumber": "978112345",
+        "recentDiagnosis": "dand saaf",
+        "patientStatus": "active"
+    },
+    {
+        "_id": "gurj332100",
+        "name": "Gurjeet Singh",
+        "age": "31",
+        "dob": "13-december-1988",
+        "gender": "male",
+        "state": "punjab",
+        "city": "mohali",
+        "address": "945 sector 70",
+        "phoneNumber": "9781332100",
+        "recentDiagnosis": "tede dand",
+        "patientStatus": "active"
+    },
+    {
+        "_id": "gurt432100",
+        "name": "Gurtej Singh",
+        "age": "53",
+        "dob": "05-July-1965",
+        "gender": "female",
+        "state": "punjab",
+        "city": "mohali",
+        "address": "945 sector 70",
+        "phone number": "9781432100",
+        "recentDiagnosis": "problem",
+        "patientStatus": "active"
+    }
+]
