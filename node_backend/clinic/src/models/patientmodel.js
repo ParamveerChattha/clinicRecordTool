@@ -35,6 +35,10 @@ const Patients = mongoose.model('patientdetail', {
     patientStatus: {
         type: String,
         required: true
+    },
+    amountPaid: {
+        type: Number,
+        default: 0
     }
 });
 

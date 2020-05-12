@@ -9,6 +9,10 @@ const Appointment = mongoose.model('appointmentdetail', {
     status: {
         type:String,
         required: true,
+    },
+    amountPaid: {
+        type: Number,
+        default: 0
     }
 });
 
