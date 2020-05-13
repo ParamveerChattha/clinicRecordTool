@@ -1,7 +1,15 @@
 const express = require('express')
 const router = express.Router();
 const User = require('../../models/usermodel');
+const auth = require('../../middleware/auth')
 
+
+router.get('/admin',auth, async(req,res) =>{
+    try{
+        const user = await User.find({})
+        res.send(user)
+    }catch(e){return res.status(500).send(e)}
+})
 router.post('/createUser', async (req, res) => {
 
     const user = new User(req.body)
@@ -9,15 +17,17 @@ router.post('/createUser', async (req, res) => {
         await user.save()
         res.status(200).send(user)
     } catch (e) {
-        res.status(500).send('user already exists')
+        res.status(500).send(e)
     }
 })
 
 router.post('/login', async (req, res) => {
     try {
         const user = await User.findUserByCredentials(req.body.userName, req.body.password)
-        if (user) { res.status(200).send('loggedin') }
+        const token = await user.generateAuthToken()
+        if (user) { res.send({user, token}) }
     } catch (e) {
+        console.log(e)
         res.status(500).send(e)
     }
 })

@@ -6,6 +6,13 @@ const login = require('./clinic/src/login/router/router.js');
 const patients = require('./clinic/src/patient/router/router.js');
 const user = require('./clinic/src/users/router/router')
 
+app.use((req,res,next) => {
+
+
+    next()
+});
+
+
 app.use(express.json());
 app.use('/patient', patients);
 app.use('/appointments', appointment);
