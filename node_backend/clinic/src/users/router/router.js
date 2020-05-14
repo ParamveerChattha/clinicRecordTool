@@ -3,12 +3,12 @@ const router = express.Router();
 const User = require('../../models/usermodel');
 const auth = require('../../middleware/auth')
 
-
-router.get('/admin',auth, async(req,res) =>{
-    try{
+// login
+router.get('/admin', auth, async (req, res) => {
+    try {
         const user = await User.find({})
         res.send(user)
-    }catch(e){return res.status(500).send(e)}
+    } catch (e) { return res.status(500).send(e) }
 })
 router.post('/createUser', async (req, res) => {
 
@@ -25,13 +25,24 @@ router.post('/login', async (req, res) => {
     try {
         const user = await User.findUserByCredentials(req.body.userName, req.body.password)
         const token = await user.generateAuthToken()
-        if (user) { res.send({user, token}) }
+        if (user) { res.send({ user, token }) }
     } catch (e) {
-        console.log(e)
         res.status(500).send(e)
     }
 })
-
+//logging out
+router.post('/logout', auth, async (req, res) => {
+    try {
+        req.user.tokens = req.user.tokens.filter((token) => {
+            return (token.token !== req.token)
+        })
+        await req.user.save()
+        res.send('logged out');
+    } catch (e) { 
+        console.log(e)
+        res.status(500).send(e) }
+})
+//update
 router.patch('/:id', async (req, res) => {
     const updates = Object.keys(req.body)
     const allowedUpdates = ['email', 'password', 'userName']
