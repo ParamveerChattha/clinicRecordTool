@@ -20,8 +20,11 @@ const userSchema = mongoose.Schema(
             minLength: "5",
             maxLength: "255"
         },
+        temp: {
+            type: String
+        },
         tokens: [{
-            token:{
+            token: {
                 type: String,
                 required: true
             }
@@ -31,18 +34,27 @@ const userSchema = mongoose.Schema(
 userSchema.methods.generateAuthToken = async function () {
     const user = this
     const token = jwt.sign({ _id: user._id.toString() }, 'thisismyuser')
-    user.tokens = user.tokens.concat({token})
+    user.tokens = user.tokens.concat({ token })
     await user.save()
     return token
 }
+
+userSchema.methods.toJSON = function () {
+    const user = this
+    const userObject = user.toObject()
+    delete userObject.tokens
+    delete userObject.password
+    return userObject
+}
+
 userSchema.statics.findUserByCredentials = async (userName, password) => {
     const user = await User.findOne({ userName });
-    if (!user) { 
-        throw new Error ('user not found')
+    if (!user) {
+        throw new Error('user not found')
     }
     const isMatch = await bcrypt.compare(password, user.password);
     if (!isMatch) {
-        throw new Error (`unable to login`)
+        throw new Error(`unable to login`)
     }
     return user
 }

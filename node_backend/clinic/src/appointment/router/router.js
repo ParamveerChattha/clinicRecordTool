@@ -2,7 +2,16 @@ const express = require('express');
 const router = express.Router();
 const Appointment = require('../../models/appointmentmodel.js');
 
-//finding appointment for status
+/**
+ * @swagger
+ * /appointments:
+ *  get:
+ *      description: to find the patients of particular status
+ *      responses:
+ *          '200':
+ *              description: a successful repsonse with patients
+ */
+
 router.get('/:status', async (req, res) => {
     const status = req.params.status
     try {
