@@ -1,12 +1,15 @@
 import React, { Component } from 'react';
-import InPatientForm from './inPatientForm'
-import './App.css';
-
+import Header from './header/Header'
+import Login from './components/Login'
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <InPatientForm/>
+      <div >
+        <div className='Header'>
+        <Header/>
+        <hr/>
+        <Login/>
+        </div> 
       </div>
     );
   }
