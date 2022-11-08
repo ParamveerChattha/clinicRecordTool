@@ -9,7 +9,7 @@
     "react": "^16.8.0-alpha.1",
     "react-bootstrap": "^0.32.4",
     "react-dom": "^16.8.0-alpha.1",
-    "react-scripts": "^3.4.1",
+    "react-scripts": "^5.0.1",
     "styled-components": "^5.1.0"
   },
   "scripts": {
